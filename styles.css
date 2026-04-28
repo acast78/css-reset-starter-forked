@@ -1,3 +1,53 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 
 
 /* CSS VARIABLES */
@@ -77,10 +127,32 @@ h2, h3{
     text-align: center;
 }
 
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.75em 0;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 0.83em 0;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
 /* Paragraph Styles */
 p{
     max-width: 65ch;
-    margin: 0.5rem auto;
+    margin: 1em auto;
 }
 
 /* Link Styles */
@@ -140,9 +212,19 @@ fieldset{
     grid-template-columns: 0.25fr 6fr 0.25fr 6fr;
     gap: 1rem;
     margin: 1rem 0;
-    border-color: var(--red);
+    border-color: 2px solid var(--red);
+    padding: 0.5rem;
 }
 
+fieldset {
+    min-inline-size: min-content;
+    margin-inline: 2px;
+    border-width: 2px;
+    border-style: groove;
+    border-image: initial;
+    padding-block: 0.35em 0.625em;
+    padding-inline: 0.75em;
+}
 /* Code for Custom Radios - Compare to Your zyBook, I added additional code to make these match my form styles */
 input[type=radio] + label {
     cursor: pointer;
@@ -186,6 +268,27 @@ input[type=radio]:focus{
 
 input[type=radio]:focus + label::before {
     box-shadow: 0 0 0 2px var(--coral);
+}
+
+/* image styles */
+figure {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    unicode-bidi: isolate;}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    height: auto;
 }
 
 /* Textarea Styles */
